@@ -1,0 +1,236 @@
+html{
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    align-items: center;
+    background: linear-gradient(45deg, #fef20a, #f30707);
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    justify-content: center;
+    font-display: swap;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px; /* Add padding to create space around the edges */
+
+}
+
+.inputzone {
+    display: flex;
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: black;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.30);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    padding: 20px 35px;
+    margin-top: 2%;
+    height: auto; /* Adaptive height */
+    width: 100%; /* Adaptive width for smaller screens */
+    max-width: 400px; /* Default max width */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 480px) {
+    :root {
+        --inputzone-width: calc(100% - 20px); /* Adjust for smaller screens, accounting for body padding */
+    }
+
+    .inputzone {
+        max-width: var(--inputzone-width); /* Use variable width for smaller screens */
+    }
+}
+
+
+.screen{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color:black;
+    font-size: 35px;
+    overflow: auto;
+    padding: 20px;
+    text-align: right;
+    width:326px;
+
+}
+
+.cal_buttons_rows{
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 0;
+}
+
+.cal_button{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: black;
+    flex-basis: 32%;
+    font-family: inherit;
+    font-size: 20px;
+    height: 65px;
+}
+
+.diff_button{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: black;
+    flex-basis: 32%;
+    font-family: inherit;
+    height: 65px;
+    font-size: 20px;
+}
+
+.diff_button:first-child{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #fff;
+    background-color: #fa6108;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.diff_button:first-child:hover{
+    background-color: inherit;
+    color: inherit;
+}
+.diff_button:active{
+    background-color: #fa6108;
+    color: inherit;
+}
+
+.cal_button:active{
+    background-color: #fa6108;
+    color: inherit;
+}
+
+:root {
+    /* Define base dimensions for livezone */
+    --livezone-width: 400px;
+    --livezone-height: 50px;
+}
+
+.livezone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: black;
+    background: rgba(255, 255, 255, 0.30);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    height: var(--livezone-height); /* Adaptive height */
+    width: 100%; /* Adaptive width */
+    max-width: var(--livezone-width); /* Max width */
+    margin-top: 1%;
+}
+
+.livezone.p{
+    justify-content: right;
+
+
+}
+
+/* Example Media Query for Smaller Screens */
+@media (max-width: 480px) {
+    :root {
+        --livezone-width: 100%; /* Adjust width to be full on small screens */
+        --livezone-height: auto; /* Adjust height based on content */
+    }
+}
+
+
+#startStopBtn{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: black;
+    height: 65%;
+    width: 9%;
+}
+
+:root {
+    /* Define base dimensions */
+    --inclinezone-width: 400px;
+    --inclinezone-height: 50px;
+}
+
+.inclinezone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: black;
+    background: rgba(255, 255, 255, 0.30);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    height: var(--inclinezone-height); /* Adaptive height */
+    width: 100%; /* Adaptive width */
+    max-width: var(--inclinezone-width); /* Max width */
+    margin-top: 1%;
+}
+
+/* Example Media Query for Smaller Screens */
+@media (max-width: 480px) {
+    :root {
+        --inclinezone-width: 100%; /* Full width on small screens */
+        --inclinezone-height: auto; /* Auto height based on content */
+    }
+}
+
+
+.inclinezone.button{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color:black;
+    font-size: 35px;
+    overflow: auto;
+    justify-content: center;
+    text-align: center;
+    width:326px;
+}
+.inclinezone.p{
+    justify-content: center;
+    align-items: center;
+}
+button {
+    touch-action: manipulation;
+}

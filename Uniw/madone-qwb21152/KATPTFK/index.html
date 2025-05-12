@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" type="image" href="logo.jpeg">
+    <title>Walking-Pacer</title>
+</head>
+<body>
+    <div class="inputzone">
+        <div class="calculator">
+            <section class="screen">
+                <p id="time"></p>
+                <p id="distance"></p>
+                <p id="pace">x</p>
+            </section>
+    
+            <section class="calculator_buttons">
+                <div class="cal_buttons_rows">
+                    <button class="cal_button" id="b7">7</button>
+                    <button class="cal_button" id="b8">8</button>
+                    <button class="cal_button" id="b9">9</button>
+                </div>
+    
+                <div class="cal_buttons_rows">
+                    <button class="cal_button" id="b4">4</button>
+                    <button class="cal_button" id="b5">5</button>
+                    <button class="cal_button" id="b6">6</button>
+                </div>
+    
+                <div class="cal_buttons_rows">
+                    <button class="cal_button" id="b1">1</button>
+                    <button class="cal_button" id="b2">2</button>
+                    <button class="cal_button" id="b3">3</button>
+                </div>
+
+                <div class="cal_buttons_rows">
+                    <button class="diff_button" id="bclear">C</button>
+                    <button class="diff_button" id="b0">0</button>
+                    <button class="diff_button" id="bback">⇦</button>
+                </div>
+
+
+            </section>
+        </div>
+    </div>
+    <div class="livezone">
+        <button id="startStopBtn">Start</button>
+        <p id="liveDistance">Live Distance: 0 m</p>
+        <p id="averagePace">Average Pace: -- mins/km</p>
+    </div>
+
+    <div class="inclinezone">
+        <p id="onscreenconsole">◬ Tap to show incline ◬</p>
+    </div>
+<script src="madone.js"></script>
+</body>
+</html>
